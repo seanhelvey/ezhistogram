@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
+    <title>ezhistogram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The easiest way to create a histogram! Simply enter comma separated values and press the button.">
     <style>
     body {
       font: 10px sans-serif;
@@ -12,6 +15,8 @@
       fill: steelblue;
       shape-rendering: crispEdges;
     }
+
+
     .bar text {
       fill: #fff;
     }
@@ -35,7 +40,7 @@
     };
 
     $(document).ready(function() {
-        var values = d3.range(1000).map(d3.random.bates(10));
+        var values = [1,2,3,3,4,4,4,5,5,6,7];
         create_graph(values);
 
         $("#create_histogram").click(function() {
@@ -88,13 +93,6 @@
             .attr("width", (x.range()[1] - x.range()[0]) / data.length - 2)
             .attr("height", function(d) { return height - y(d.y); });
 
-        bar.append("text")
-            .attr("dy", ".75em")
-            .attr("y", 6)
-            .attr("x", x(data[0].dx) / 2)
-            .attr("text-anchor", "middle")
-            .text(function(d) { return formatCount(d.y); });
-
         svg.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + height + ")")
@@ -103,7 +101,7 @@
     </script>
     <div id="wrapper">
         <textarea id="input_data" rows="4" cols="50">
-        Enter comma separated values here!
+        1, 2, 3, 3, 4, 4, 4, 5, 5, 6, 7
         </textarea>
         <button id="create_histogram">Create Histogram</button>
         <div id="chart"></div>
