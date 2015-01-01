@@ -12,6 +12,11 @@ $(document).ready(function() {
     $("#create_histogram").click(function() {
         create_graph();
     });
+
+    $( window ).on( "orientationchange", function( event ) {
+        create_graph();
+    });
+
 });
 
 d3.select(window).on('resize', create_graph);

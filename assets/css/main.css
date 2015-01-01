@@ -5,7 +5,11 @@ body {
     text-align: center;
 }
 
-.main-info {
+h1 {
+    padding: 3px;
+}
+
+.main-info, .well, #chart_wrapper, #footer {
     margin-bottom: 40px;
 }
 
@@ -16,7 +20,6 @@ body {
     border-radius: 0.2em;          /* theoretically for *all* browsers
                                     dependant on implementation of CSS3 */
     border: 1px solid #ccc;
-    padding: 3px;
     line-height: 60px;
 }
 
