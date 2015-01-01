@@ -1,0 +1,44 @@
+body {
+    font: 10px sans-serif;
+    margin: 0 50px auto;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.main-info {
+    margin-bottom: 40px;
+}
+
+.highlighted-amount {
+     background-color:#ffcccc;
+    -moz-border-radius: 0.2em;     /* for mozilla-based browsers */
+    -webkit-border-radius: 0.2em;  /* for webkit-based browsers */
+    border-radius: 0.2em;          /* theoretically for *all* browsers
+                                    dependant on implementation of CSS3 */
+    border: 1px solid #ccc;
+    padding: 3px;
+    line-height: 60px;
+}
+
+#input_data {
+    max-width: 100%;
+}
+
+#chart_wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.bar rect {
+    fill: steelblue;
+    shape-rendering: crispEdges;
+}
+
+.bar text {
+    fill: #fff;
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
